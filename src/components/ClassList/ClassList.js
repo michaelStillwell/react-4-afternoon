@@ -24,6 +24,11 @@ export default class ClassList extends Component {
 	  let { students } = this.state;
     return (
       <div className="box">
+		<Link
+			to='/'
+		>
+			<p>Back</p>
+		</Link>
         <h1>{this.props.match.params.class}</h1>
         <h2>ClassList:</h2>
 		{

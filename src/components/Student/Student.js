@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 let baseURL = 'http://localhost:3005/students/'
 
@@ -23,6 +24,11 @@ export default class Student extends Component {
     let { studentInfo } = this.state;
     return (
       <div className="box">
+        <Link
+          to={`/classList/${studentInfo.class}`}
+        >
+          <p>Back</p>
+        </Link>
         <h1>Student</h1>
         <h1>
           {`${studentInfo.first_name} ${studentInfo.last_name}`}
